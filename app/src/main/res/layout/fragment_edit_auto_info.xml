@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGray"
+    android:padding="16dp"
+    tools:context=".ui.auto.editAutoInfo.EditAutoInfoFragment">
+
+    <EditText
+        android:id="@+id/brandEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:hint="Марка"
+        android:inputType="text"
+        android:maxLength="30"
+        android:maxLines="1"
+        android:minHeight="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/modelEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:autofillHints=""
+        android:hint="Модель"
+        android:inputType="text"
+        android:maxLength="30"
+        android:maxLines="1"
+        android:minHeight="50dp"
+        app:layout_constraintStart_toStartOf="@id/brandEdit"
+        app:layout_constraintTop_toBottomOf="@id/brandEdit"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/mileageEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:autofillHints="0"
+        android:hint="Пробег"
+        android:inputType="numberDecimal"
+        android:maxLength="30"
+        android:maxLines="1"
+        android:minHeight="50dp"
+        app:layout_constraintStart_toStartOf="@id/modelEdit"
+        app:layout_constraintTop_toBottomOf="@id/modelEdit"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/powerEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:autofillHints="0"
+        android:hint="Мощность"
+        android:inputType="numberDecimal"
+        android:maxLength="30"
+        android:maxLines="1"
+        android:minHeight="50dp"
+        app:layout_constraintStart_toStartOf="@id/mileageEdit"
+        app:layout_constraintTop_toBottomOf="@id/mileageEdit"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/fuelTypeEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:autofillHints=""
+        android:hint="Тип топлива"
+        android:inputType="text"
+        android:maxLength="30"
+        android:maxLines="1"
+        android:minHeight="50dp"
+        app:layout_constraintStart_toStartOf="@id/powerEdit"
+        app:layout_constraintTop_toBottomOf="@id/powerEdit"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/yearEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:autofillHints="0"
+        android:hint="Год выпуска"
+        android:inputType="numberDecimal"
+        android:maxLength="30"
+        android:maxLines="1"
+        android:minHeight="50dp"
+        app:layout_constraintStart_toStartOf="@id/fuelTypeEdit"
+        app:layout_constraintTop_toBottomOf="@id/fuelTypeEdit"
+        tools:ignore="HardcodedText" />
+
+    <RelativeLayout
+        android:id="@+id/btns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yearEdit">
+
+        <Button
+            android:id="@+id/cancelBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:backgroundTint="@color/chestnutRed"
+            android:text="Отменить"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="@color/grassGreen"
+            android:text="Сохранить"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

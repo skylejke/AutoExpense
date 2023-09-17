@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/autoInfoFragment"
+        android:icon="@drawable/baseline_garage_24"
+        android:title="Авто"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/statsFragment"
+        android:icon="@drawable/baseline_auto_graph_24"
+        android:title="Статистика"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/serviceFragment"
+        android:icon="@drawable/baseline_build_24"
+        android:title="Сервис"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/fuelFragment"
+        android:icon="@drawable/baseline_local_gas_station_24"
+        android:title="Топливо"
+        tools:ignore="HardcodedText" />
+</menu>
