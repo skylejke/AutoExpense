@@ -1,4 +1,4 @@
-package com.example.autoexpense.ui.auto.editAutoInfo
+package com.example.autoexpense.presentation.auto.editAutoInfo
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

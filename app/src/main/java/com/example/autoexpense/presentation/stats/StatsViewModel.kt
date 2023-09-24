@@ -1,4 +1,4 @@
-package com.example.autoexpense.ui.stats
+package com.example.autoexpense.presentation.stats
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

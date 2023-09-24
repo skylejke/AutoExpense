@@ -1,4 +1,4 @@
-package com.example.autoexpense.ui
+package com.example.autoexpense.presentation
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

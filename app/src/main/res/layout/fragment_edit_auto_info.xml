@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/lightGray"
     android:padding="16dp"
-    tools:context=".ui.auto.editAutoInfo.EditAutoInfoFragment">
+    tools:context=".presentation.auto.editAutoInfo.EditAutoInfoFragment">
 
     <EditText
         android:id="@+id/brandEdit"

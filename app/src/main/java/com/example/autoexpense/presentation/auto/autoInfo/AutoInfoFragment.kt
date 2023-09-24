@@ -1,4 +1,4 @@
-package com.example.autoexpense.ui.auto.autoInfo
+package com.example.autoexpense.presentation.auto.autoInfo
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -8,13 +8,13 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import com.example.autoexpense.R
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class AutoInfoFragment : Fragment() {
 
-    private lateinit var autoInfoViewModel: AutoInfoViewModel
+    private val autoInfoViewModel by viewModel<AutoInfoViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,11 +26,6 @@ class AutoInfoFragment : Fragment() {
     @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        autoInfoViewModel = ViewModelProvider(
-            this,
-            AutoInfoViewModelFactory(requireContext())
-        )[AutoInfoViewModel::class.java]
 
         val navController = NavHostFragment.findNavController(this)
 

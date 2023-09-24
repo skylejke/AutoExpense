@@ -1,4 +1,4 @@
-package com.example.autoexpense.ui.fuel
+package com.example.autoexpense.presentation.fuel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

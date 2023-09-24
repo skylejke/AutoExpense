@@ -1,4 +1,4 @@
-package com.example.autoexpense.ui.auto.editAutoInfo
+package com.example.autoexpense.presentation.auto.editAutoInfo
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,31 +8,25 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import com.example.autoexpense.R
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
 class EditAutoInfoFragment : Fragment() {
 
-    private lateinit var editAutoInfoViewModel: EditAutoInfoViewModel
+    private val editAutoInfoViewModel by viewModel<EditAutoInfoViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_edit_auto_info, container, false)
     }
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        editAutoInfoViewModel = ViewModelProvider(
-            this,
-            EditAutoInfoViewModelFactory(requireContext())
-        )[EditAutoInfoViewModel::class.java]
 
         val navController = NavHostFragment.findNavController(this)
 
