@@ -5,8 +5,9 @@ import com.example.autoexpense.data.storage.models.Auto
 import com.example.autoexpense.domain.models.AutoInfo
 import com.example.autoexpense.domain.models.EditAutoInfo
 import com.example.autoexpense.domain.repository.AutoInfoRepository
+import javax.inject.Inject
 
-class AutoInfoRepositoryImpl(private val autoInfoStorage: AutoInfoStorage) : AutoInfoRepository {
+class AutoInfoRepositoryImpl  @Inject constructor(private val autoInfoStorage: AutoInfoStorage) : AutoInfoRepository {
 
     override fun editInfo(editParam: EditAutoInfo): Boolean {
         val auto = mapToStorage(editParam)

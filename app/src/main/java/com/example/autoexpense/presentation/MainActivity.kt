@@ -7,7 +7,9 @@ import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
 import com.example.autoexpense.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

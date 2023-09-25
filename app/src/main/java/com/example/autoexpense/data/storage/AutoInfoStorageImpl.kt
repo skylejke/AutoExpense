@@ -2,6 +2,7 @@ package com.example.autoexpense.data.storage
 
 import android.content.Context
 import com.example.autoexpense.data.storage.models.Auto
+import javax.inject.Inject
 
 private const val AUTO_INFO_SHARED_PREFS_NAME = "auto_info_shared_prefs_name"
 
@@ -19,7 +20,7 @@ private const val DEFAULT_POWER_VALUE = 0
 private const val DEFAULT_FUEL_TYPE_VALUE = "Default fuelType"
 private const val DEFAULT_YEAR_VALUE = 1973
 
-class AutoInfoStorageImpl(context: Context) : AutoInfoStorage {
+class AutoInfoStorageImpl  @Inject constructor(context: Context) : AutoInfoStorage {
 
     private val sharedPreferences =
         context.getSharedPreferences(AUTO_INFO_SHARED_PREFS_NAME, Context.MODE_PRIVATE)

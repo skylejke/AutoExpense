@@ -5,8 +5,10 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.autoexpense.domain.models.EditAutoInfo
 import com.example.autoexpense.domain.usecase.EditAutoInfoUseCase
-
-class EditAutoInfoViewModel(private val editAutoInfoUseCase: EditAutoInfoUseCase) : ViewModel() {
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
+@HiltViewModel
+class EditAutoInfoViewModel  @Inject constructor(private val editAutoInfoUseCase: EditAutoInfoUseCase) : ViewModel() {
 
     private val editAutoInfoMutableLiveData = MutableLiveData<EditAutoInfo>()
     val editAutoInfoLiveData: LiveData<EditAutoInfo> = editAutoInfoMutableLiveData

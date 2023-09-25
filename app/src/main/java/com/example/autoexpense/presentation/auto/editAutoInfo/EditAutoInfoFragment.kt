@@ -8,14 +8,15 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.NavHostFragment
 import com.example.autoexpense.R
-import org.koin.androidx.viewmodel.ext.android.viewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class EditAutoInfoFragment : Fragment() {
 
-    private val editAutoInfoViewModel by viewModel<EditAutoInfoViewModel>()
+    private val editAutoInfoViewModel by viewModels<EditAutoInfoViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

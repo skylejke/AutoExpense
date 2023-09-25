@@ -1,17 +1,24 @@
 package com.example.autoexpense.di
 
+import com.example.autoexpense.data.repository.AutoInfoRepositoryImpl
 import com.example.autoexpense.domain.usecase.EditAutoInfoUseCase
 import com.example.autoexpense.domain.usecase.GetAutoInfoUseCase
-import org.koin.dsl.module
+import dagger.Module
+import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.android.components.ViewModelComponent
 
-val domainModule = module {
+@Module
+@InstallIn(ViewModelComponent::class)
+class DomainModule {
 
-    factory<GetAutoInfoUseCase> {
-        GetAutoInfoUseCase(autoInfoRepository = get())
+    @Provides
+    fun provideGetAutoInfoUseCase(autoInfoRepository: AutoInfoRepositoryImpl): GetAutoInfoUseCase {
+        return GetAutoInfoUseCase(autoInfoRepository = autoInfoRepository)
     }
 
-    factory<EditAutoInfoUseCase> {
-        EditAutoInfoUseCase(autoInfoRepository = get())
+    @Provides
+    fun provideEditAutoInfoUseCase(autoInfoRepository: AutoInfoRepositoryImpl): EditAutoInfoUseCase {
+        return EditAutoInfoUseCase(autoInfoRepository = autoInfoRepository)
     }
-
 }
