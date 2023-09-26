@@ -55,5 +55,4 @@ class AutoInfoStorageImpl  @Inject constructor(context: Context) : AutoInfoStora
             year = year
         )
     }
-
 }

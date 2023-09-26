@@ -13,9 +13,8 @@ class AutoInfoViewModel @Inject constructor(private val getAutoInfoUseCase: GetA
     private var autoInfoMutableLiveData = MutableLiveData<AutoInfo>()
     val autoInfoLiveData: LiveData<AutoInfo> = autoInfoMutableLiveData
 
-    fun get() {
+    fun getAutoInfo() {
         val autoInfo: AutoInfo = getAutoInfoUseCase.execute()
         autoInfoMutableLiveData.value = autoInfo
     }
-
 }

@@ -9,5 +9,4 @@ class GetAutoInfoUseCase  @Inject constructor(private val autoInfoRepository: Au
     fun execute(): AutoInfo {
         return autoInfoRepository.getInfo()
     }
-
 }

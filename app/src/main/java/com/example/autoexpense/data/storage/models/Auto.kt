@@ -1,6 +1,6 @@
 package com.example.autoexpense.data.storage.models
 
-class Auto(
+data class Auto(
     val brand: String,
     val model: String,
     val mileage: Int,

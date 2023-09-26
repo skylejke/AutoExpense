@@ -59,7 +59,7 @@ class EditAutoInfoFragment : Fragment() {
             }
 
             if (mileageText != null && powerText != null && yearText != null) {
-                editAutoInfoViewModel.edit(
+                editAutoInfoViewModel.editAutoInfo(
                     brandText,
                     modelText,
                     mileageText,
@@ -73,13 +73,10 @@ class EditAutoInfoFragment : Fragment() {
                     Toast.makeText(requireContext(), "Заполните все поля", Toast.LENGTH_SHORT)
                 toast.show()
             }
-
         }
-
 
         cancelBtn.setOnClickListener {
             navController.popBackStack()
         }
     }
-
 }

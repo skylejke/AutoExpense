@@ -1,6 +1,6 @@
 package com.example.autoexpense.domain.models
 
-class EditAutoInfo(
+data class EditAutoInfo(
     val brand: String,
     val model: String,
     val mileage: Int,

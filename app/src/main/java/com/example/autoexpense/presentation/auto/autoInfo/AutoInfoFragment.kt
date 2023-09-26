@@ -46,7 +46,7 @@ class AutoInfoFragment : Fragment() {
             yearText.text = "${it.year}"
         }
 
-        autoInfoViewModel.get()
+        autoInfoViewModel.getAutoInfo()
 
         editAutoInfoBtn.setOnClickListener {
             navController.navigate(R.id.action_autoInfoFragment_to_editAutoInfoFragment)

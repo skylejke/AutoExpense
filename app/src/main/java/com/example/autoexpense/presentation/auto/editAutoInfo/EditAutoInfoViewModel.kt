@@ -1,6 +1,5 @@
 package com.example.autoexpense.presentation.auto.editAutoInfo
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.autoexpense.domain.models.EditAutoInfo
@@ -11,9 +10,8 @@ import javax.inject.Inject
 class EditAutoInfoViewModel  @Inject constructor(private val editAutoInfoUseCase: EditAutoInfoUseCase) : ViewModel() {
 
     private val editAutoInfoMutableLiveData = MutableLiveData<EditAutoInfo>()
-    val editAutoInfoLiveData: LiveData<EditAutoInfo> = editAutoInfoMutableLiveData
 
-    fun edit(
+    fun editAutoInfo(
         brand: String,
         model: String,
         mileage: Int,
